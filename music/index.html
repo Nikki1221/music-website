@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music website helpk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="E:\SocialDiary-master\music\Sound webpage_img\\logo.png" alt="">
+            <ul>
+                <li><a href="#"> HOME</a></li>
+                <li><a href="#">PLAYLIST</a></li>
+                <li><a href="#">BLOGS</a></li>
+                <li><a href="#">CONNECT WITH US</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="left-col">
+                <h1>THE REAL SOUND</h1>
+            </div>
+            <div class="right-col">
+                <p>Click here to listen</p>
+                <img src="E:\SocialDiary-master\music\Sound webpage_img\\play.png" alt="" id="icon">
+            </div>
+        </div>
+    </div>
+    <audio id="mySong">
+        <source src="E:\SocialDiary-master\music\\Cartoon x nublu x Gameboy Tetris - Biology [NCS Release].mp3">
+    </audio>
+    <script>
+        var mysong=document.getElementById("mySong");
+        var icon=document.getElementById("icon");
+        icon.onclick=function() {
+           if(mysong.paused){
+               mysong.play();
+               icon.src="\music\Sound webpage_img\\pause.png";
+           }
+           else
+           {
+               
+               mysong.pause();
+               icon.src="\music\Sound webpage_img\\play.png";
+           }
+        }
+    </script>
+</body>
+</html>
